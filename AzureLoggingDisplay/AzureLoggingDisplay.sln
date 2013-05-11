@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AzureLoggingDisplay", "AzureLoggingDisplay\AzureLoggingDisplay.ccproj", "{32E8FBA5-2E53-499C-9271-DE4EF03683C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogViewerWebRole", "LogViewerWebRole\LogViewerWebRole.csproj", "{E6D1F374-318A-476A-B6D3-983022D3048A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32E8FBA5-2E53-499C-9271-DE4EF03683C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32E8FBA5-2E53-499C-9271-DE4EF03683C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32E8FBA5-2E53-499C-9271-DE4EF03683C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32E8FBA5-2E53-499C-9271-DE4EF03683C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6D1F374-318A-476A-B6D3-983022D3048A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6D1F374-318A-476A-B6D3-983022D3048A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6D1F374-318A-476A-B6D3-983022D3048A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6D1F374-318A-476A-B6D3-983022D3048A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

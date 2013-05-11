@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>MvcContrib</id>
+    <version>2.0.95.0</version>
+    <title>MvcContrib</title>
+    <authors>Codeplex Foundation</authors>
+    <owners>Codeplex Foundation</owners>
+    <projectUrl>http://mvccontrib.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>MvcContrib was designed to add functionality and ease-of-use to Microsoft's ASP.NET MVC Framework, MVC Contrib is useful for developers looking to develop and test UI elements on top of the ASP.NET MVC framework.</description>
+    <summary>MvcContrib was designed to add functionality and ease-of-use to Microsoft's ASP.NET MVC Framework, MVC Contrib is useful for developers looking to develop and test UI elements on top of the ASP.NET MVC framework.</summary>
+    <releaseNotes />
+    <copyright />
+    <language />
+    <tags>mvc aspnetmvc</tags>
+    <dependencies>
+      <dependency id="MicrosoftWebMvc" version="2.0" />
+    </dependencies>
+  </metadata>
+</package>
