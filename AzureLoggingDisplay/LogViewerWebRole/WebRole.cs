@@ -13,8 +13,9 @@ namespace LogViewerWebRole
         {
             // For information on handling configuration changes
             // see the MSDN topic at http://go.microsoft.com/fwlink/?LinkId=166357.
-
+         //   DataCache cache
             return base.OnStart();
+
         }
     }
 }
