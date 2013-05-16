@@ -1,0 +1,6 @@
+<model>
+  <entity name="Owner">
+  </entity>
+  <entity name="Cat">
+  </entity>
+</model>

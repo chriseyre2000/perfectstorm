@@ -1,0 +1,17 @@
+﻿<Application x:Class="WpfTrainingApp.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    StartupUri="Window1.xaml">
+    <Application.Resources>
+        <LinearGradientBrush x:Key="BackgroundColour" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="Red" Offset="0" />
+            <GradientStop Color="Orange" Offset="0.15" />
+            <GradientStop Color="Yellow" Offset="0.35" />
+            <GradientStop Color="Green" Offset="0.50" />
+            <GradientStop Color="Blue" Offset="0.65" />
+            <GradientStop Color="Indigo" Offset="0.85" />
+            <GradientStop Color="Violet" Offset="1" />
+        </LinearGradientBrush>
+
+    </Application.Resources>
+</Application>

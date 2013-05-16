@@ -1,0 +1,5 @@
+<model>
+  <data id="foo">42</data>
+  <entity name="Owner" id="foo">
+  </entity>
+</model>
