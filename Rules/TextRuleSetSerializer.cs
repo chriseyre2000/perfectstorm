@@ -123,7 +123,7 @@ namespace PerfectStorm.Rules
             foreach (XmlNode ruleNode in xDoc.SelectNodes("//Rule"))
             {
                 Rule rule = new Rule();
-                rule.Active = ruleNode.SelectSingleNode("@Active").InnerText == "true";
+                rule.Active = ruleNode.SelectSingleNode("@Active").InnerText == "True";
                 rule.Description = ruleNode.SelectSingleNode("@Description").InnerText;
                 rule.Name = ruleNode.SelectSingleNode("@Name").InnerText;
                 rule.Priority = int.Parse(ruleNode.SelectSingleNode("@Priority").InnerText);
