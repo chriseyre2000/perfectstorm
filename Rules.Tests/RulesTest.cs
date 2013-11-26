@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Workflow.Activities.Rules;
+using System.IO;
 
 using NUnit.Framework;
 using PerfectStorm.Rules;
@@ -89,7 +90,7 @@ namespace Rules.Tests
 
         const string XmlRule = @"
 <RuleSet.Text Name='Text Ruleset' Description='Test Ruleset' ChainingBehavior='None'>
-  <Rule Active='true' Name='R1' Description='Checks Name' Priority='1' ReevaluationBehavior='Never' >
+  <Rule Active='True' Name='R1' Description='Checks Name' Priority='1' ReevaluationBehavior='Never' >
   <Condition>this.Name == null</Condition>
   <ThenActions>
     <Action>this.ValidationMessages.Add(""Name should not be empty"")</Action>
@@ -109,6 +110,19 @@ namespace Rules.Tests
             Rules.Execute(execution);
             Assert.AreEqual(1, p.ValidationMessages.Count);
         }
+
+        [Test]
+        public void FileStringRule()
+        {
+            TextRuleSetSerializer rs = new TextRuleSetSerializer();
+            RuleSet Rules = rs.Deserialize(typeof(Person), File.ReadAllText(@".\Ruleset.Rule") );
+            Person p = new Person();
+            RuleExecution execution = new RuleExecution(new RuleValidation(p.GetType(), null), p);
+
+            Rules.Execute(execution);
+            Assert.AreEqual(1, p.ValidationMessages.Count);
+        }
+
 
         [Test]
         public void StringConditions()

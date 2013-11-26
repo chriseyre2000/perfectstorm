@@ -1,0 +1,8 @@
+﻿<RuleSet.Text Name='Text Ruleset' Description='Test Ruleset' ChainingBehavior='None'>
+  <Rule Active='True' Name='R1' Description='Checks Name' Priority='1' ReevaluationBehavior='Never' >
+  <Condition>this.Name == null</Condition>
+  <ThenActions>
+    <Action>this.ValidationMessages.Add("Name should not be empty")</Action>
+  </ThenActions>
+  </Rule>
+</RuleSet.Text>
