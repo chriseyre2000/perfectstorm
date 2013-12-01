@@ -15,4 +15,7 @@ pub sub framework
 
 But these have not yet been upgraded to use the more recent .net framework.
 
+Here is a stand alone rules engine project:
+
+RulesEngine
 

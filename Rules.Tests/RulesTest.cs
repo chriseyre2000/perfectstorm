@@ -16,11 +16,8 @@ namespace Rules.Tests
 
         public class Person
         {
-            private string _Name;
-            private int _Age;
-            
-            public string Name { get {return _Name;}  set { _Name = value;} }
-            public int Age { get {return _Age;} set {_Age = value;} }
+            public string Name { get; set;}
+            public int Age { get; set; }
             private List<string> _ValidationMessages = new List<string>();
             public List<string> ValidationMessages { get { return _ValidationMessages; } }
         }
@@ -99,6 +96,17 @@ namespace Rules.Tests
 </RuleSet.Text>
 ";
 
+        const string XmlRuleAssignment = @"
+<RuleSet.Text Name='Text Ruleset' Description='Test Ruleset' ChainingBehavior='None'>
+  <Rule Active='True' Name='R1' Description='Checks Name' Priority='1' ReevaluationBehavior='Never' >
+  <Condition>this.Name == null</Condition>
+  <ThenActions>
+    <Action>this.Age = 10</Action>
+  </ThenActions>
+  </Rule>
+</RuleSet.Text>
+";
+
         [Test]
         public void StringRule()
         { 
@@ -109,6 +117,18 @@ namespace Rules.Tests
 
             Rules.Execute(execution);
             Assert.AreEqual(1, p.ValidationMessages.Count);
+        }
+
+        [Test]
+        public void StringRuleAssignment()
+        {
+            TextRuleSetSerializer rs = new TextRuleSetSerializer();
+            RuleSet Rules = rs.Deserialize(typeof(Person), XmlRuleAssignment);
+            Person p = new Person();
+            RuleExecution execution = new RuleExecution(new RuleValidation(p.GetType(), null), p);
+
+            Rules.Execute(execution);
+            Assert.AreEqual(10, p.Age);
         }
 
         [Test]
